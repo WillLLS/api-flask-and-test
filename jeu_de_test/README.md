@@ -11,7 +11,7 @@ La fonction de test se décomponse en 4 sous-parties:
     - Test delete
 
 Pour effectuer des tests singuliers, utiliser les fonctions xxx_assert(). 
-(xxx = la requête à tester Cf. les fichiers de requêtes pour plus de détails).
+(xxx = la requête à tester Cf. librairie de test).
 
-Amélioration :
+Amélioration possible :
     Ajouter une vérification en passant par la base de données
