@@ -1,4 +1,4 @@
-from .app import app,api
+from app import app,api
 from flask_restx import fields
 
 get_allcategories = api.model('retourgetallcategories',{'intitule':fields.String(exemple='Action'),'location':fields.Url(exemple='/categorieFilm/1')})

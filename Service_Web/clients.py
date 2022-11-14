@@ -1,5 +1,5 @@
-from .app import app, api
-from .models import *
+from app import app, api
+from models import *
 
 from flask import jsonify, url_for, request, abort
 from flask_restx import Resource, fields
