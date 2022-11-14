@@ -113,9 +113,12 @@ class ClientId(Resource):
         except sqlite3.Error as e:
             print("Erreur lors de la suppression du client ",e)
             connection.rollback()
-        finally:
-            connection.close()
-            return()
+        
+        connection.close()
+
+        response = jsonify({})
+        response.status_code == 200
+        return response
 
 
 

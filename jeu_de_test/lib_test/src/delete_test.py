@@ -56,7 +56,7 @@ def delete_assert():
     ##################### 
     """, Style.RESET_ALL, end="")
     
-    #delete_categorieFilm_id_assert()
+    delete_categorieFilm_id_assert()
     delete_clients_id_assert()
 
 if __name__=="__main__":

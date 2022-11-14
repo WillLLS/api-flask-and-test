@@ -1,4 +1,4 @@
-from src.init import *
+from .init import *
 
 def get_categorieFilm_assert():
 
@@ -45,7 +45,7 @@ def get_categorieFilm_id_film_assert():
     except:
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
-
+    print(response.json()[0])
     assert(response.json()[0]==ans["catIdFilm"])
     print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
 

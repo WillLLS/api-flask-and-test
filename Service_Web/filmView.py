@@ -204,9 +204,11 @@ class CategorieOne(Resource):
         except sqlite3.Error as e:
             print("Erreur lors de la suppression de la catégorie",e)
             connection.rollback()
-        finally:
-            connection.close()
-            return()
+            
+        connection.close()
+        response = jsonify({})
+        response.status_code == 200
+        return response
 
 """
 Gestion des films dans une catégorie
