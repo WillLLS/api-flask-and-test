@@ -1,0 +1,5 @@
+venv/
+Service_Web/__pycache__
+jeu_de_test/__pycache__
+jeu_de_test/lib_test/__pycache__
+jeu_de_test/lib_test/src/__pycache__
