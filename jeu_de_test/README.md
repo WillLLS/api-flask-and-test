@@ -2,7 +2,7 @@ Dossier de test.
 
 Pour executer un test complet, executer le script test.sh
 
-Ce script réinitialise avant et après le test pour éviter les conflits.
+Ce script réinitialise la base de donnée avant et après le test pour éviter les conflits.
 
 La fonction de test se décomponse en 4 sous-parties:
     - Test get
@@ -12,6 +12,10 @@ La fonction de test se décomponse en 4 sous-parties:
 
 Pour effectuer des tests singuliers, utiliser les fonctions xxx_assert(). 
 (xxx = la requête à tester Cf. librairie de test).
+
+
+Si le script test.sh ne fonctionne pas, il est possible d'executer le fichier main.py dans le dossier ./src.
+
 
 Amélioration possible :
     Ajouter une vérification en passant par la base de données

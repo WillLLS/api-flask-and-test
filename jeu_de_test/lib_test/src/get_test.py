@@ -46,7 +46,7 @@ def get_categorieFilm_id_film_assert():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    assert(response.json()[1] == ans["catIdFilm"])
+    assert(response.json()[0] == ans["catIdFilm"])
     print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
 
 def get_clients_assert():
