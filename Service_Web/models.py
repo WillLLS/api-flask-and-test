@@ -37,3 +37,9 @@ clientget = api.model('clientget',{'id':fields.Integer(exemple=1),
                         'email':fields.String(exemple='wi@hotmail.fr'),
                         'age':fields.Integer(exemple='23')})
 film_clientpost= api.model('film_clientpost',{'idFilm':fields.Integer(exemple=1)})
+
+add_client = api.model('clientpost', {
+                                    'nom_client':fields.String(exemple='Dupond'),
+                                     "prenom":fields.String(exemple='Dupond'), 
+                                     "email":fields.String(exemple='truc@truc.fr'), 
+                                     "age":fields.Integer(exemple=49)})
