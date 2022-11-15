@@ -16,8 +16,11 @@ def post_categorieFilm_assert():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    assert(response.json() == body)
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    try:
+        assert(response.json() == body)
+        print(Fore.GREEN + "\t -test payload passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 def post_client_assert():
 
@@ -33,9 +36,12 @@ def post_client_assert():
     except:
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
-
-    assert(response.json() == body)
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    
+    try:
+        assert(response.json() == body)
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 def post_film_edit_assert():
     
@@ -51,8 +57,11 @@ def post_film_edit_assert():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    assert(response.json() == {})
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    try:
+        assert(response.json() == {})
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 def post_clients_id_film_assert():
         
@@ -74,8 +83,42 @@ def post_clients_id_film_assert():
 
         return 
 
-    assert(response.json() == payload)
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    try:
+        assert(response.json() == payload)
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
+
+def post_clients_assert():
+
+    print("\nTest post clients :")
+        
+    _url = url + "/clients/2/film" 
+    payload = {
+                "nom_client": "testName",
+                "prenom": "testPrenom",
+                "email": "testEmail",
+                "age": 1
+                }
+    response = requests.post(_url, json=payload)
+
+    try:
+        assert(response.status_code==201)
+        print(Fore.GREEN + "\t -test status code passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
+        return
+
+    if response.json() == {}:
+        print(Fore.YELLOW + "\t -test answer not passed : {} - verify return", Style.RESET_ALL)
+
+        return 
+
+    try:
+        assert(response.json() == payload)
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 
 def post_assert():
@@ -87,7 +130,7 @@ def post_assert():
     """, Style.RESET_ALL, end="")
     
     post_categorieFilm_assert()
-    #post_client_assert()
+    post_client_assert()
     post_film_edit_assert()
     post_clients_id_film_assert()
     print()

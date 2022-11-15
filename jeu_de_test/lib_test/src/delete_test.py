@@ -18,8 +18,11 @@ def delete_categorieFilm_id_assert():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    assert(response.json() == {})
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    try:
+        assert(response.json() == {})
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 def delete_clients_id_assert():
     print("\nTest delete clients/id :")
@@ -43,9 +46,12 @@ def delete_clients_id_assert():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    answer = {}
-    assert(response.json() == answer)
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    try:
+        answer = {}
+        assert(response.json() == answer)
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 def delete_assert():
 

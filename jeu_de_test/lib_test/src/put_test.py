@@ -15,8 +15,11 @@ def put_categorieFilm_id_assert():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    assert(response.json() == body)
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    try:
+        assert(response.json() == body)
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 def put_film_id_assert():
         
@@ -33,8 +36,11 @@ def put_film_id_assert():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    assert(response.json() == ans["putFilmIdAns"])
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    try:
+        assert(response.json() == ans["putFilmIdAns"])
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
 
 def put_client_id():
             
@@ -51,10 +57,13 @@ def put_client_id():
         print(Fore.RED + "\t -test status code not passed.", Style.RESET_ALL)
         return
 
-    answer = {'age': 22, 'email': 'william.lalis@etu.univ-orleans.fr', 'nom': 'Lalis', 'prenom': 'William'}
-    assert(response.json() == answer)
-    print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
-
+    try:
+        answer = {'age': 22, 'email': 'william.lalis@etu.univ-orleans.fr', 'nom': 'Lalis', 'prenom': 'William'}
+        assert(response.json() == answer)
+        print(Fore.GREEN + "\t -test answer passed.", Style.RESET_ALL)
+    except:
+        print(Fore.RED + "\t -test paylod not passed.", Style.RESET_ALL)
+        
 def put_assert():
 
     print(Fore.CYAN + """

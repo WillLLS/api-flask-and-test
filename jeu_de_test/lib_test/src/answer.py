@@ -1,4 +1,5 @@
 ans = {
+    "Client": [{'age': 23, 'email': 'aym@gmail.com', 'nom_client': 'René', 'prenom': 'Aymerik'}, {'age': 23, 'email': 'wi@hotmail.fr', 'nom_client': 'Lalis', 'prenom': 'William'}, {'age': 22, 'email': 'aya@outlook.com', 'nom_client': 'Kongyrbayeva', 'prenom': 'Aya'}], 
     "getClient": {'Adress mail': 'wi@hotmail.fr', 'Age': 23, 'Nom': 'Lalis', 'Prenom': 'William', 'id': 2},
     "catFilm": [
                 {
