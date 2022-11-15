@@ -11,7 +11,6 @@ def delete_categorieFilm_id_assert():
         print(Fore.RED + "\t\tError 404: Check the database.", Style.RESET_ALL)
         return
 
-    print("Answer :", response.json())
     try:
         assert(response.status_code==200)
         print(Fore.GREEN + "\t -test status code passed.", Style.RESET_ALL)
