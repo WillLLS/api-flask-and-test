@@ -65,7 +65,7 @@ def post_film_edit_assert():
 
 def post_clients_id_film_assert():
         
-    print("\nTest post film edit :")
+    print("\nTest post client/id/film :")
 
     _url = url + "/clients/2/film" 
     payload = {"idFilm": 3}
