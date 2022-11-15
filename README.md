@@ -1,4 +1,7 @@
-# api-flask-and-test
+# Ecole de l’IOT – Mini-projet serveurs et framework 
+## API Flask
+### Aigerim Kongyrbayeva, Aymerik René , William Lallis
+
 
 Pour lancer l'application : 
   - Créer un environnement python virtuel.
